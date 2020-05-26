@@ -1,19 +1,20 @@
-## Snake AI
+# Snake AI
 
-# About
+### About
 
 An AI implementation of the classic snake game, which achieves a near perfect score the majority of the time. Can also be played using WASD controls in a user mode.
 
 A config file is included, where certain properties can be changed.
 
 
-# Controls
+### Controls
 
--If AI is disabled, use WASD for movement
--Use 'p' to pause the game
--Use number keys '0-9' to control the speed of the game.
+* If AI is disabled, use WASD for movement
+* Use 'p' to pause the game
+* Use number keys '0-9' to control the speed of the game.
 -------------------------------------------------------
 
+### Behaviour
 
 This AI obeys the following logic:
 
