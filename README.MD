@@ -5,6 +5,17 @@
 An AI implementation of the classic snake game, which achieves a near perfect score the majority of the time.
 A config file is included, where certain properties can be changed.
 
+### Sample Run
+
+![alt text][logo]
+
+[logo]: https://github.com/danielbatchford/SnakeAI/sampleimage.png
+
+### How To Run This Project
+
+Run the .jar file located at out\\artifacts\\Snake_jar\\Snake.jar
+
+Properties can be edited in config.properties, located on the same path.
 
 ### Controls
 
