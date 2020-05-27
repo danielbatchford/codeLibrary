@@ -3,7 +3,6 @@ package snake;
 import processing.core.PApplet;
 import processing.core.PShape;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayDeque;
 
@@ -15,10 +14,9 @@ public class Renderer extends PApplet {
 
     public static void main(String[] args) {
 
-        try{
+        try {
             Cfg.getProperties();
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Cannot read from config file");
             System.exit(0);
@@ -27,14 +25,9 @@ public class Renderer extends PApplet {
     }
 
     public void settings() {
-        if (Cfg.FULLSCREEN) {
-            fullScreen();
-        }
-
+        if (Cfg.FULLSCREEN) fullScreen();
 
         size(Cfg.width, Cfg.height);
-
-
         noSmooth();
 
     }
@@ -71,17 +64,14 @@ public class Renderer extends PApplet {
 
             Cfg.paused = !Cfg.paused;
             if (!Cfg.paused) loop();
-        } else if (!Cfg.AI && (key == 'w' || key == 'a' || key == 's' || key == 'd'))
-            game.setUserDirection(new Direction(key));
+        } else try {
+            int i;
+            if (key == '0') i = 9;
+            else i = Integer.parseInt(String.valueOf(key)) - 1;
+            Cfg.updateInterval = Cfg.SPEED_MAPPING[i];
 
-        else try {
-                int i;
-                if (key == '0') i = 9;
-                else i = Integer.parseInt(String.valueOf(key)) - 1;
-                Cfg.updateInterval = Cfg.SPEED_MAPPING[i];
-
-            } catch (NumberFormatException e) {
-            }
+        } catch (NumberFormatException e) {
+        }
 
     }
 
@@ -91,7 +81,6 @@ public class Renderer extends PApplet {
         if (Cfg.paused) noLoop();
 
         if (frameCount % Cfg.updateInterval == 0) {
-
             if (!game.alive) {
                 System.out.println("Game Won");
                 noLoop();
@@ -106,30 +95,28 @@ public class Renderer extends PApplet {
 
             //Drawing Path
             PShape followPath = null;
-            if (Cfg.AI && Cfg.DRAW_PATH) {
-
-                ArrayDeque<int[]> path = game.getPath();
-
-                followPath = createShape();
-                followPath.beginShape();
-
-                int[] pathCol = (game.surviving) ? Cfg.GREY : Cfg.PURPLE;
-                followPath.stroke(pathCol[0], pathCol[1], pathCol[2], pathCol[3]);
-                followPath.strokeWeight(Cfg.xInc * Cfg.PATH_SCALE);
-                followPath.strokeCap(PROJECT);
-                followPath.strokeJoin(MITER);
-                followPath.noFill();
-
-                int[] head = drawSnake.getFirst();
-                followPath.vertex(Cfg.xInc * head[0] + Cfg.xInc / 2, Cfg.yInc * head[1] + Cfg.yInc / 2);
-                for (int i = 0, max = path.size(); i < max; i++) {
-                    int[] cord = path.pop();
-                    followPath.vertex(Cfg.xInc * cord[0] + Cfg.xInc / 2, Cfg.yInc * cord[1] + Cfg.yInc / 2);
-                }
-                followPath.endShape();
 
 
+            ArrayDeque<int[]> path = game.getPath();
+
+            followPath = createShape();
+            followPath.beginShape();
+
+            int[] pathCol = (game.surviving) ? Cfg.GREY : Cfg.PURPLE;
+            followPath.stroke(pathCol[0], pathCol[1], pathCol[2], pathCol[3]);
+            followPath.strokeWeight(Cfg.xInc * Cfg.PATH_SCALE);
+            followPath.strokeCap(PROJECT);
+            followPath.strokeJoin(MITER);
+            followPath.noFill();
+
+            int[] head = drawSnake.getFirst();
+            followPath.vertex(Cfg.xInc * head[0] + Cfg.xInc / 2, Cfg.yInc * head[1] + Cfg.yInc / 2);
+            for (int i = 0, max = path.size(); i < max; i++) {
+                int[] cord = path.pop();
+                followPath.vertex(Cfg.xInc * cord[0] + Cfg.xInc / 2, Cfg.yInc * cord[1] + Cfg.yInc / 2);
             }
+            followPath.endShape();
+
 
             PShape snakePath = createShape();
             snakePath.beginShape();
@@ -147,11 +134,10 @@ public class Renderer extends PApplet {
 
             shape(gameBg);
 
-            if (Cfg.AI && Cfg.DRAW_PATH) shape(followPath);
+            shape(followPath);
             shape(snakePath);
 
             int[] appleLocation = game.appleLocation;
-
 
             fill(Cfg.RED[0], Cfg.RED[1], Cfg.RED[2]);
             rect((float) ((appleLocation[0] + 0.5) * Cfg.xInc), (float) ((appleLocation[1] + 0.5) * Cfg.yInc), Cfg.xInc * Cfg.APPLE_SCALE, Cfg.yInc * Cfg.APPLE_SCALE);

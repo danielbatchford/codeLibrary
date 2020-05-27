@@ -29,19 +29,18 @@ public class Game {
         appleLocation = apple.getApple(snake); //This might cause errors
         length = Cfg.DEFAULT_LENGTH;
         surviving = false;
-        if(Cfg.AI) updatePath();
+        updatePath();
 
     }
 
 
     public void update() {
 
-        if (surviving && Cfg.AI) updatePath();
+        if (surviving) updatePath();
 
-        if (Cfg.AI) direction = new Direction(Util.subtract(path.pollFirst(), snake.getFirst()));
+        direction = new Direction(Util.subtract(path.pollFirst(), snake.getFirst()));
 
         travel();
-        shorten(length);
     }
 
     private void travel() {
@@ -55,6 +54,10 @@ public class Game {
 
         if (checkAppleCollected(newHead)) {
             if (alive = !(Arrays.equals(appleLocation, new int[]{-1, -1}))) updatePath();
+        }
+
+        for (int i = 0, size = snake.size(); i < size - length; i++) {
+            snake.removeLast();
         }
     }
 
@@ -71,48 +74,21 @@ public class Game {
     }
 
 
-    private void shorten(int length) {
-
-        for (int i = 0, size = snake.size(); i < size - length; i++) {
-            snake.removeLast();
-        }
-    }
-
     public boolean checkCollision(int[] head) {
         ArrayList<int[]> snakeList = new ArrayList<>(snake);
 
         snakeList.remove(snakeList.size() - 1); // needed currently to allow snake to be directly behind tail, shitty solution for now
 
-        if (Util.contains(snakeList, head) && Cfg.BODY_COLLISIONS) {
+        if (Util.contains(snakeList, head)) {
             System.out.println("Collision with body");
             return true;
         }
 
-        if (Cfg.WALL_COLLISIONS && (head[0] < 0 || head[0] >= Cfg.xDiv || head[1] < 0 || head[1] >= Cfg.yDiv)) {
+        if (head[0] < 0 || head[0] >= Cfg.xDiv || head[1] < 0 || head[1] >= Cfg.yDiv) {
             System.out.println("Collision with wall");
             return true;
         }
         return false;
-    }
-
-    public void setUserDirection(Direction newDirection) {
-        switch (this.direction.getName()) {
-            case 'w':
-                if (newDirection.getName() == 's') return;
-                break;
-            case 'a':
-                if (newDirection.getName() == 'd') return;
-                break;
-            case 's':
-                if (newDirection.getName() == 'w') return;
-                break;
-            case 'd':
-                if (newDirection.getName() == 'a') return;
-                break;
-            default:
-                System.out.println("Bad Direction Given");
-        }
-        this.direction = newDirection;
     }
 
     private void updatePath() {
@@ -135,9 +111,5 @@ public class Game {
 
     public ArrayDeque<int[]> getPath() {
         return path.clone();
-    }
-
-    public Direction getDirection() {
-        return direction;
     }
 }

@@ -48,13 +48,5 @@ public class Direction {
         return dir;
     }
 
-    public char getName() {
-        return name;
-    }
-
-    public String toString() {
-        return name + "";
-    }
-
 
 }

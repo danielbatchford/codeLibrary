@@ -21,41 +21,6 @@ public class Util {
         return c;
     }
 
-    public static float[] add(float[] a, float[] b) {
-        float[] c = new float[a.length];
-        for (int i = 0; i < a.length; i++) {
-            c[i] = a[i] + b[i];
-        }
-        return c;
-    }
-
-    public static String toConsole(float[] object) {
-        StringBuilder s = new StringBuilder();
-
-        for (float ob : object) {
-            s.append(ob);
-            s.append(" ");
-        }
-        return s.toString();
-    }
-
-    public static String toConsole(int[] object) {
-        StringBuilder s = new StringBuilder();
-        for (int ob : object) {
-            s.append(ob);
-            s.append(" ");
-        }
-        return s.toString();
-    }
-
-    public static String toConsole(ArrayList<int[]> object) {
-        StringBuilder s = new StringBuilder();
-        for (int[] a : object) {
-            s.append("(").append(a[0]).append(",").append(a[1]).append(") ");
-        }
-        return s.toString();
-    }
-
     public static ArrayList<int[]> removeAll(ArrayList<int[]> subject, ArrayList<int[]> toRemove) { //This can be optimised, using true false array?
         boolean toAdd;
         ArrayList<int[]> result = new ArrayList<>();
@@ -93,13 +58,6 @@ public class Util {
         }
         return false;
 
-    }
-
-    public static boolean isZeroVector(int[] v) {
-        for (int i = 0; i < v.length; i++) {
-            if (v[i] != 0) return false;
-        }
-        return true;
     }
 
 }

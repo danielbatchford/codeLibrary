@@ -35,8 +35,8 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/Snake_jar" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/snake" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -49,14 +49,16 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Cex\Desktop\Snake\out\artifacts\Snake_jar" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Cex\Documents\Finished Projects\Snake" />
       <recent name="C:\Users\Cex\Desktop\Snake\src" />
       <recent name="C:\Users\Cex\Desktop\Snake\out\production\Snake" />
       <recent name="C:\Users\Cex\Desktop\Snake\out" />
       <recent name="C:\Users\Cex\Desktop\Snake" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Cex\Documents\Finished Projects\Snake\src\snake" />
+      <recent name="C:\Users\Cex\Desktop\Snake\out\artifacts\Snake_jar" />
     </key>
   </component>
   <component name="RunManager" selected="JAR Application.TestJar">
@@ -69,16 +71,26 @@
     </configuration>
     <configuration name="TestJar" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Snake_jar/Snake.jar" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\Cex\Desktop\Snake" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Cex\Documents\Finished Projects\Snake" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
+    <configuration name="core.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/production/Snake/core.jar" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Renderer" />
       <item itemvalue="JAR Application.TestJar" />
+      <item itemvalue="JAR Application.core.jar" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.core.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="WindowStateProjectService">
     <state x="1100" y="297" key="#BuildArtifactsBeforeRunChooser" timestamp="1589219718650">
@@ -90,11 +102,11 @@
     </state>
     <state x="440" y="99" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1587844721225" />
     <state x="440" y="102" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1589190547849" />
-    <state x="774" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589219726193">
+    <state x="774" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590584708672">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="414" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1587844655894" />
-    <state x="774" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589219726193" />
+    <state x="774" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590584708672" />
     <state x="765" y="238" key="#com.intellij.ide.util.MemberChooser" timestamp="1588187650873">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -104,11 +116,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="316" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589189884167" />
-    <state x="689" y="323" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589221014730">
+    <state x="689" y="323" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1590584378701">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="689" y="314" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1587678626924" />
-    <state x="689" y="323" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1589221014730" />
+    <state x="689" y="323" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1590584378701" />
     <state x="664" y="246" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1589015354377">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -148,31 +160,31 @@
     </state>
     <state x="718" y="394" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1050@0.0.1920.1050" timestamp="1587985530554" />
     <state x="718" y="405" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1080@0.0.1920.1080" timestamp="1589215259538" />
-    <state x="740" y="287" key="FileChooserDialogImpl" timestamp="1589221037961">
+    <state x="740" y="287" key="FileChooserDialogImpl" timestamp="1590584523300">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1587996023915" />
-    <state x="740" y="287" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1589221037961" />
-    <state width="1899" height="219" key="GridCell.Tab.0.bottom" timestamp="1589222194693">
+    <state x="740" y="287" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1590584523300" />
+    <state width="1877" height="219" key="GridCell.Tab.0.bottom" timestamp="1590584871216">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="170" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1588348608960" />
-    <state width="1899" height="219" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1589222194693" />
-    <state width="1899" height="219" key="GridCell.Tab.0.center" timestamp="1589222194693">
+    <state width="1877" height="219" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1590584871216" />
+    <state width="1877" height="219" key="GridCell.Tab.0.center" timestamp="1590584871215">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="170" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1588348608960" />
-    <state width="1899" height="219" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1589222194693" />
-    <state width="1899" height="219" key="GridCell.Tab.0.left" timestamp="1589222194693">
+    <state width="1877" height="219" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1590584871215" />
+    <state width="1877" height="219" key="GridCell.Tab.0.left" timestamp="1590584871215">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="170" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1588348608960" />
-    <state width="1899" height="219" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1589222194693" />
-    <state width="1899" height="219" key="GridCell.Tab.0.right" timestamp="1589222194693">
+    <state width="1877" height="219" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1590584871215" />
+    <state width="1877" height="219" key="GridCell.Tab.0.right" timestamp="1590584871215">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="170" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1588348608960" />
-    <state width="1899" height="219" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1589222194693" />
+    <state width="1877" height="219" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1590584871215" />
     <state width="1899" height="363" key="GridCell.Tab.1.bottom" timestamp="1588791451698">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -189,11 +201,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1899" height="363" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1588791451698" />
-    <state x="821" y="136" key="SettingsEditor" timestamp="1589221122859">
+    <state x="439" y="173" key="SettingsEditor" timestamp="1590585055828">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="440" y="111" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1588339774032" />
-    <state x="821" y="136" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1589221122859" />
+    <state x="439" y="173" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1590585055828" />
     <state x="776" y="317" key="chooseDestDirectoryDialog" timestamp="1589150409782">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
