@@ -34,6 +34,6 @@ This AI obeys the following logic:
 
 * Else, find the longest path from the head of the snake to it's own tail. This path is constantly updated and attempts are made to find a valid path to the apple each step.
 
-###Credit
+### Credit
 
 Credit to https://github.com/xaguzman/pathfinding for the pathfinding library.
