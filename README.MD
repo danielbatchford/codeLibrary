@@ -1,4 +1,4 @@
-# Snake AI
+# Snake AI but better
 
 ### About
 
@@ -37,3 +37,4 @@ This AI obeys the following logic:
 ### Credit
 
 Credit to https://github.com/xaguzman/pathfinding for the pathfinding library.
+Bitchford for being a little bitch
