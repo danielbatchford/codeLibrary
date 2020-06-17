@@ -9,7 +9,7 @@ A config file is included, where certain properties can be changed.
 
 ![alt text][logo]
 
-[logo]: https://github.com/danielbatchford/SnakeAI/blob/master/sampleimage.png?raw=true
+[logo]: https://github.com/danielbatchford/SnakeAI/blob/master/sample.gif?raw=true
 
 ### How To Run This Project
 
